@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+.mt-100 {
+    margin-top: 100px;
+}
+
+body::before {
+    background-image: url(diamond.png);
+    background-size: contain;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: 500px;
+    height: 500px;
+    transform: rotate(15deg);
+    z-index: -2;
+    opacity: 0.05;
+    animation: appear 2s;
+}
+
+body::after {
+    background-image: url(diamond.png);
+    background-size: contain;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 60%;
+    left: 70%;
+    width: 300px;
+    height: 300px;
+    transform: rotate(-25deg);
+    z-index: -2;
+    opacity: 0.05;
+    animation: appear 1s;
+}
+
+
+.header {
+    font-family: 'Cabin Sketch', cursive;
+    animation: appear 2s 1s both;
+}
+
+.first {
+    font-family: 'Amatic SC', cursive;
+    animation: appear 3s 2s both;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.second {
+    font-family: 'Amatic SC', cursive;
+}
+
+.footer {
+    background-color: #444;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.footer .header {
+    font-family: 'Cabin Sketch', cursive;
+}
+
+
+.footer .btn {
+    color: #ddd;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+ul {
+    padding: 0;
+
+}
+
+ul li {
+    list-style: none;
+
+}
+
+ul li a {
+    color: #fff;
+    transition: .5s;
+}
+
+ul li a:hover {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer .fab {
+    color: #fff;
+    transition: .5s;
+}
+
+.fa-facebook-f:hover {
+    color: #3b5998
+}
+
+.fa-twitter:hover {
+    color: #0084b4
+}
+
+.fa-instagram:hover {
+    color: #c32aa3
+}
+
+@keyframes appear {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 100%;
+    }
+
+}
+
+@media (max-width: 767px) {
+    body::before {
+
+        width: 250px;
+        height: 250px;
+
+    }
+
+    body::after {
+        width: 150px;
+        height: 150px;
+    }
+
+}
+
+
+[class^='imghvr-'],
+[class*=' imghvr-'] {
+    background-color: #444;
+}
+
+[class^='imghvr-'] figcaption,
+[class*=' imghvr-'] figcaption {
+    background-color: #444;
+}
